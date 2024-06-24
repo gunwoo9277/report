@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>로그인 페이지</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    .container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .container h2 {
+        margin-top: 0;
+        text-align: center;
+    }
+    .container form {
+        display: flex;
+        flex-direction: column;
+    }
+    .container form input[type="text"],
+    .container form input[type="password"] {
+        margin-bottom: 10px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    .container form input[type="submit"],
+    .container form input[type="reset"] {
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        background-color: #007BFF;
+        color: #fff;
+        cursor: pointer;
+        margin-bottom: 10px;
+    }
+    .container form input[type="reset"] {
+        background-color: #6c757d;
+    }
+    .container form input[type="submit"]:hover,
+    .container form input[type="reset"]:hover {
+        background-color: #0056b3;
+    }
+    .container form input[type="reset"]:hover {
+        background-color: #5a6268;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h2>로그인</h2>
+    <form name="login_form" method="post" action="/test/login.jsp">
+        <label for="id">ID :</label>
+        <input type="text" id="id" name="id"><br>
+        <label for="pw">Password :</label>
+        <input type="password" id="pw" name="pw"><br>
+        <input type="submit" value="submit">
+        <input type="reset" value="cancel">
+    </form>
+    <!-- 회원가입 버튼 추가 -->
+    <form action="insert.jsp" method="get">
+        <input type="submit" value="회원가입">
+    </form>
+</div>
+</body>
+</html>
